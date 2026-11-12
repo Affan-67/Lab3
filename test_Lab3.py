@@ -28,3 +28,21 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+
+def test_numberiszero():
+    result = Lab3.bubble_sort([], Lab3.SORT_DESCENDING)
+
+    assert (result == 0)
+
+def test_numbermore_orequal10():
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 67, 51, 42, 69]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert(result == 1)
+
+def test_notintegers():
+    input_arr = [21, 42, 67, "nugget", 51, "67"]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert(result == 2)
